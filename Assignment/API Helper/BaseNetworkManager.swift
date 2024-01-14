@@ -161,7 +161,7 @@ class BaseNetworkManager: Transport {
                 case 400:
                     self.handleErrorResponse(respData: respData, failureCallBack: failureCallBack)
                 default:
-                    failureCallBack("Unknown Failure Case,Server Down")
+                    failureCallBack(error?.localizedDescription)
                 }
             }
         }.resume()

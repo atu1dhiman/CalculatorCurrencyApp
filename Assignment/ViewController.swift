@@ -8,11 +8,15 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     // MARK:  IBOutlets
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var currencyBT: UIButton!
     @IBOutlet weak var calculatorBT: UIButton!
+    
+    // MARK:  DataModel Variables
+    private var currencyData : CurrencyData?
+    private let listArr = [String]()
     
     // MARK: ViewController Lifecycle
     override func viewDidLoad() {
@@ -33,3 +37,6 @@ extension ViewController {
 // MARK: UI Methods
 extension ViewController {
 }
+
+
+

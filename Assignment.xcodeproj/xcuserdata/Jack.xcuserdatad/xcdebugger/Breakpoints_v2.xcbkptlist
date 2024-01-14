@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "E38C258A-DBD3-43EF-ADB7-99BDEB7E2E93"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "65613B7A-A450-43A1-9F12-D944E5C2893B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Assignment/API Helper/CurrencyNetworkFile.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "getAllCurrencyRate(to:from:successCallBack:failureCallBack:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D7D67439-9399-433A-BBD1-E41546202C58"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Assignment/API Helper/CurrencyNetworkFile.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "getAllCurrencyRate(to:from:successCallBack:failureCallBack:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D7D67439-9399-433A-BBD1-E41546202C58 - 741b5b8478317513"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Assignment.CurrencyNetworkFile.getAllCurrencyRate(to: Swift.String, from: Swift.String, successCallBack: (Assignment.CurrencyData) -&gt; (), failureCallBack: (Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Assignment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Jack/Desktop/appss/CalculatorCurrencyApp/Assignment/API%20Helper/CurrencyNetworkFile.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "105"
+                  endingLineNumber = "105"
+                  offsetFromSymbolStart = "408">
+               </Location>
+               <Location
+                  uuid = "D7D67439-9399-433A-BBD1-E41546202C58 - d004266c3df9ed1d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;) -&gt; () in Assignment.CurrencyNetworkFile.getAllCurrencyRate(to: Swift.String, from: Swift.String, successCallBack: (Assignment.CurrencyData) -&gt; (), failureCallBack: (Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Assignment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Jack/Desktop/appss/CalculatorCurrencyApp/Assignment/API%20Helper/CurrencyNetworkFile.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "105"
+                  endingLineNumber = "105"
+                  offsetFromSymbolStart = "148">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9FBBFB66-16F1-4F39-B726-266AFBE88B42"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Assignment/API Helper/BaseNetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
+            landmarkName = "fetch(_:successCallBack:failureCallBack:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9FBBFB66-16F1-4F39-B726-266AFBE88B42 - 8d2b0b417c796aa4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Assignment.BaseNetworkManager.fetch(_: Swift.Optional&lt;Foundation.URLRequest&gt;, successCallBack: (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;) -&gt; (), failureCallBack: (Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Assignment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Jack/Desktop/appss/CalculatorCurrencyApp/Assignment/API%20Helper/BaseNetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "157"
+                  endingLineNumber = "157"
+                  offsetFromSymbolStart = "220">
+               </Location>
+               <Location
+                  uuid = "9FBBFB66-16F1-4F39-B726-266AFBE88B42 - 8d2b0b417c796aa4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Assignment.BaseNetworkManager.fetch(_: Swift.Optional&lt;Foundation.URLRequest&gt;, successCallBack: (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;) -&gt; (), failureCallBack: (Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Assignment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Jack/Desktop/appss/CalculatorCurrencyApp/Assignment/API%20Helper/BaseNetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "157"
+                  endingLineNumber = "157"
+                  offsetFromSymbolStart = "832">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FF6733F3-EEF2-440B-B5BC-B02A89B4AC60"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Assignment/API Helper/BaseNetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
+            landmarkName = "fetch(_:successCallBack:failureCallBack:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FF6733F3-EEF2-440B-B5BC-B02A89B4AC60 - 8d2b0b417c796d28"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Assignment.BaseNetworkManager.fetch(_: Swift.Optional&lt;Foundation.URLRequest&gt;, successCallBack: (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;) -&gt; (), failureCallBack: (Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Assignment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Jack/Desktop/appss/CalculatorCurrencyApp/Assignment/API%20Helper/BaseNetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "153"
+                  endingLineNumber = "153"
+                  offsetFromSymbolStart = "176">
+               </Location>
+               <Location
+                  uuid = "FF6733F3-EEF2-440B-B5BC-B02A89B4AC60 - 8d2b0b417c796d28"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Assignment.BaseNetworkManager.fetch(_: Swift.Optional&lt;Foundation.URLRequest&gt;, successCallBack: (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;) -&gt; (), failureCallBack: (Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Assignment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Jack/Desktop/appss/CalculatorCurrencyApp/Assignment/API%20Helper/BaseNetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "153"
+                  endingLineNumber = "153"
+                  offsetFromSymbolStart = "288">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9992B72C-7DBC-4FC8-9AEA-D4CC785E3CC6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Assignment/API Helper/BaseNetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
+            landmarkName = "fetch(_:successCallBack:failureCallBack:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1627B52C-8C67-41A7-8AC2-BB2BC6534A34"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Assignment/Currency/CurrencyViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "textFieldDidChange(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
