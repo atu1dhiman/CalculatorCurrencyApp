@@ -17,6 +17,7 @@
 		047C8CAD2B5106DF007EE2FC /* AssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047C8CAC2B5106DF007EE2FC /* AssignmentUITests.swift */; };
 		047C8CAF2B5106DF007EE2FC /* AssignmentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047C8CAE2B5106DF007EE2FC /* AssignmentUITestsLaunchTests.swift */; };
 		04DC12142B53B0530077BB6D /* CurrencyDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DC12132B53B0530077BB6D /* CurrencyDataModel.swift */; };
+		04DC12962B54F3070077BB6D /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 04DC12952B54F3070077BB6D /* IQKeyboardManagerSwift */; };
 		4A07D06F2B51493000E01217 /* BaseNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A07D06E2B51493000E01217 /* BaseNetworkManager.swift */; };
 		4A07D0722B51519600E01217 /* CurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A07D0702B51519600E01217 /* CurrencyViewController.swift */; };
 		4A07D0732B51519600E01217 /* CurrencyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A07D0712B51519600E01217 /* CurrencyViewController.xib */; };
@@ -70,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04DC12962B54F3070077BB6D /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,7 +119,6 @@
 				4A07D0742B51562300E01217 /* CommonFile */,
 				4A07D06D2B5147CA00E01217 /* API Helper */,
 				4A07D06C2B51476000E01217 /* Currency */,
-				4A07D06B2B51475000E01217 /* Calculator */,
 				047C8CBB2B5107EF007EE2FC /* AppDelegates */,
 				047C8C8F2B5106DD007EE2FC /* ViewController.swift */,
 				047C8C912B5106DD007EE2FC /* Main.storyboard */,
@@ -160,13 +161,6 @@
 				04DC12132B53B0530077BB6D /* CurrencyDataModel.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		4A07D06B2B51475000E01217 /* Calculator */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Calculator;
 			sourceTree = "<group>";
 		};
 		4A07D06C2B51476000E01217 /* Currency */ = {
@@ -212,6 +206,9 @@
 			dependencies = (
 			);
 			name = Assignment;
+			packageProductDependencies = (
+				04DC12952B54F3070077BB6D /* IQKeyboardManagerSwift */,
+			);
 			productName = Assignment;
 			productReference = 047C8C882B5106DD007EE2FC /* Assignment.app */;
 			productType = "com.apple.product-type.application";
@@ -285,6 +282,7 @@
 			);
 			mainGroup = 047C8C7F2B5106DD007EE2FC;
 			packageReferences = (
+				04DC12942B54F3070077BB6D /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = 047C8C892B5106DD007EE2FC /* Products */;
 			projectDirPath = "";
@@ -524,7 +522,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Assignment/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -552,7 +550,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Assignment/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -685,6 +683,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		04DC12942B54F3070077BB6D /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		04DC12952B54F3070077BB6D /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04DC12942B54F3070077BB6D /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 047C8C802B5106DD007EE2FC /* Project object */;
 }

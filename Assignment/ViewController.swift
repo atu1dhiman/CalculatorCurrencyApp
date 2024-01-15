@@ -12,15 +12,14 @@ class ViewController: UIViewController {
     // MARK:  IBOutlets
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var currencyBT: UIButton!
-    @IBOutlet weak var calculatorBT: UIButton!
     
     // MARK:  DataModel Variables
     private var currencyData : CurrencyData?
-    private let listArr = [String]()
     
     // MARK: ViewController Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        UILoad()
     }
 }
 
@@ -29,13 +28,13 @@ extension ViewController {
     @IBAction func currencyNavAction(_ sender: Any) {
         Navigator.navigate(from: self, to: CurrencyViewController.self, with: "")
     }
-    @IBAction func calculatorNavAction(_ sender: Any) {
-        
-    }
 }
 
 // MARK: UI Methods
 extension ViewController {
+    private func UILoad() {
+        currencyBT.layer.cornerRadius = 10
+    }
 }
 
 

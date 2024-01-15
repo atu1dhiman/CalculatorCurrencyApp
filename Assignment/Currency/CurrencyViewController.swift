@@ -76,8 +76,13 @@ extension CurrencyViewController {
     }
     @objc func textFieldDidChange(_ textField: UITextField)  {
         guard let Amount = enterAmtTxtField.text else { return }
-        let rateValue = rate(baseAmt: currencyData?.data?[fromLbl.text ?? ""] ?? 0.0, convertAmt: currencyData?.data?[toLbl.text ?? ""] ?? 0.0)
-        resultLbl.text = "\(String(format: "%.2f", rateValue)) \(fromLbl.text ?? "")"
+        if Double(Amount) ?? 0.0 < 0{
+            showAlertError()
+        }else{
+            let rateValue = rate(baseAmt: currencyData?.data?[fromLbl.text ?? ""] ?? 0.0, convertAmt: currencyData?.data?[toLbl.text ?? ""] ?? 0.0)
+            resultLbl.text = "\(String(format: "%.2f", rateValue)) \(fromLbl.text ?? "")"
+        }
+        
     }
     private func rate(baseAmt : Double, convertAmt : Double) -> Double{
         if flag {
@@ -88,6 +93,20 @@ extension CurrencyViewController {
             return sumAmt
         }
     }
+    
+    private func showAlertError() {
+        let alert = UIAlertController(title: AccessKeys.errorTitle, message: AccessKeys.errorMsg, preferredStyle: .alert)
+            
+        alert.addAction(UIAlertAction(title: AccessKeys.errorBT, style: UIAlertAction.Style.default, handler: { _ in
+              self.dismiss(animated: true)
+          }))
+          DispatchQueue.main.async {
+              self.present(alert, animated: false, completion: nil)
+          }
+            
+      }
+    
+    
 }
 // MARK: - Picker Delgate Methods.
 extension CurrencyViewController {

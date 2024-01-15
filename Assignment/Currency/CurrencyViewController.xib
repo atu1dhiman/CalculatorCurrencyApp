@@ -221,14 +221,12 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p2f-Wj-E3a">
                     <rect key="frame" x="0.0" y="479" width="414" height="257"/>
                     <subviews>
-                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G08-ub-waD">
-                            <rect key="frame" x="0.0" y="41" width="414" height="216"/>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <outlet property="dataSource" destination="-1" id="L2z-O7-6Pb"/>
-                                <outlet property="delegate" destination="-1" id="v4z-jo-89C"/>
-                            </connections>
-                        </pickerView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select the Country Currency Code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yj9-j7-CBf">
+                            <rect key="frame" x="30.000000000000014" y="4" width="235.33333333333337" height="35"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lgb-EL-Di2">
                             <rect key="frame" x="331" y="4" width="75" height="35"/>
                             <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
@@ -242,15 +240,25 @@
                                 <action selector="doneAction:" destination="-1" eventType="touchUpInside" id="V8C-yS-slj"/>
                             </connections>
                         </button>
+                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G08-ub-waD">
+                            <rect key="frame" x="0.0" y="41" width="414" height="216"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="L2z-O7-6Pb"/>
+                                <outlet property="delegate" destination="-1" id="v4z-jo-89C"/>
+                            </connections>
+                        </pickerView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstItem="G08-ub-waD" firstAttribute="top" secondItem="yj9-j7-CBf" secondAttribute="bottom" constant="2" id="0v7-2J-dVH"/>
                         <constraint firstItem="G08-ub-waD" firstAttribute="top" secondItem="Lgb-EL-Di2" secondAttribute="bottom" constant="2" id="32Q-dR-X6l"/>
                         <constraint firstAttribute="bottom" secondItem="G08-ub-waD" secondAttribute="bottom" id="OBa-63-EjC"/>
                         <constraint firstItem="G08-ub-waD" firstAttribute="height" secondItem="p2f-Wj-E3a" secondAttribute="height" multiplier="0.840467" id="c92-LU-FPO"/>
                         <constraint firstAttribute="trailing" secondItem="Lgb-EL-Di2" secondAttribute="trailing" constant="8" id="hCs-17-60b"/>
                         <constraint firstAttribute="trailing" secondItem="G08-ub-waD" secondAttribute="trailing" id="hRG-bH-cDW"/>
                         <constraint firstItem="G08-ub-waD" firstAttribute="leading" secondItem="p2f-Wj-E3a" secondAttribute="leading" id="hnA-Ie-HAe"/>
+                        <constraint firstItem="yj9-j7-CBf" firstAttribute="top" secondItem="p2f-Wj-E3a" secondAttribute="top" constant="4" id="pRV-4E-D4m"/>
                         <constraint firstItem="Lgb-EL-Di2" firstAttribute="top" secondItem="p2f-Wj-E3a" secondAttribute="top" constant="4" id="reA-uU-R8i"/>
                     </constraints>
                 </view>
@@ -267,6 +275,7 @@
                 <constraint firstAttribute="bottom" secondItem="p2f-Wj-E3a" secondAttribute="bottom" id="Wsm-Fq-vrR"/>
                 <constraint firstItem="EvZ-W5-L26" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="Xzs-tY-ahI"/>
                 <constraint firstItem="cn8-06-h79" firstAttribute="top" secondItem="EvZ-W5-L26" secondAttribute="bottom" constant="23" id="aTN-SS-kUJ"/>
+                <constraint firstItem="yj9-j7-CBf" firstAttribute="leading" secondItem="fzZ-fr-Gid" secondAttribute="leading" id="alB-sn-qpN"/>
                 <constraint firstItem="SRP-ww-aWf" firstAttribute="top" secondItem="FQf-sm-68X" secondAttribute="bottom" constant="12" id="cUd-qg-Rz6"/>
                 <constraint firstItem="SRP-ww-aWf" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.0679348" id="cul-en-lca"/>
                 <constraint firstItem="HY7-YR-LzU" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.903382" id="dGm-b9-WKk"/>
