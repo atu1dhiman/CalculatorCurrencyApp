@@ -56,13 +56,13 @@ extension CurrencyViewController {
     @IBAction func doneAction(_ sender: Any) {
         pickerVw.isHidden = true
         let rateValue = rate(baseAmt: currencyData?.data?[fromLbl.text ?? ""] ?? 0.0, convertAmt: currencyData?.data?[toLbl.text ?? ""] ?? 0.0)
-        resultLbl.text = "\(String(format: "%.2f", rateValue)) \(fromLbl.text ?? "")"
+        let roundedA = round(rateValue * 100) / 100
+        resultLbl.text = "\(String(format: "%.2f", roundedA)) \(fromLbl.text ?? "")"
         let toText = toLbl.text ?? ""
         let fromText = fromLbl.text ?? ""
         // Add a new record
-        let newRecord = CurrencyConversionRecord(sourceCurrency: fromText, targetCurrency: toText, exchangeRate: Double(resultLbl.text ?? "") ?? 0.0, amount: Double(enterAmtTxtField.text ?? "") ?? 0.0 , date: Date())
+        let newRecord = CurrencyConversionRecord(sourceCurrency: fromText, targetCurrency: toText, exchangeRate: roundedA, amount: Double(enterAmtTxtField.text ?? "") ?? 0.0 , date: Date())
         conversionRecords.append(newRecord)
-
         // Save records
         let encoder = JSONEncoder()
         if let encoded = try? encoder.encode(conversionRecords) {
@@ -76,9 +76,10 @@ extension CurrencyViewController {
             fromLbl.text = toText
             toLbl.text = fromText
             let rateValue = rate(baseAmt: currencyData?.data?[fromLbl.text ?? ""] ?? 0.0, convertAmt: currencyData?.data?[toLbl.text ?? ""] ?? 0.0)
-            resultLbl.text = "\(String(format: "%.2f", rateValue)) \(fromLbl.text ?? "")"
+            let roundedA = round(rateValue * 100) / 100
+            resultLbl.text = "\(String(format: "%.2f", roundedA)) \(fromLbl.text ?? "")"
             // Add a new record
-            let newRecord = CurrencyConversionRecord(sourceCurrency: fromText, targetCurrency: toText, exchangeRate: Double(resultLbl.text ?? "") ?? 0.0, amount: Double(enterAmtTxtField.text ?? "") ?? 0.0 , date: Date())
+            let newRecord = CurrencyConversionRecord(sourceCurrency: fromText, targetCurrency: toText, exchangeRate: roundedA, amount: Double(enterAmtTxtField.text ?? "") ?? 0.0 , date: Date())
             conversionRecords.append(newRecord)
             // Save records
             let encoder = JSONEncoder()
@@ -92,7 +93,6 @@ extension CurrencyViewController {
 // MARK: - UI Compement Methods...
 extension CurrencyViewController {
     private func UILoad() {
-       
         currencyVw.layer.cornerRadius = 10
         resultVw.layer.cornerRadius = 10
         doneBT.layer.cornerRadius = 10
@@ -114,10 +114,16 @@ extension CurrencyViewController {
             showAlertError()
         }else{
             let rateValue = rate(baseAmt: currencyData?.data?[fromLbl.text ?? ""] ?? 0.0, convertAmt: currencyData?.data?[toLbl.text ?? ""] ?? 0.0)
-            resultLbl.text = "\(String(format: "%.2f", rateValue)) \(fromLbl.text ?? "")"
-            
-            let newRecord = CurrencyConversionRecord(sourceCurrency: fromText, targetCurrency: toText, exchangeRate: Double(resultLbl.text ?? "") ?? 0.0, amount: Double(enterAmtTxtField.text ?? "") ?? 0.0 , date: Date())
+            let roundedA = round(rateValue * 100) / 100
+            resultLbl.text = "\(String(format: "%.2f", roundedA)) \(fromLbl.text ?? "")"
+            // Add a new record
+            let newRecord = CurrencyConversionRecord(sourceCurrency: fromText, targetCurrency: toText, exchangeRate: roundedA, amount: Double(enterAmtTxtField.text ?? "") ?? 0.0 , date: Date())
             conversionRecords.append(newRecord)
+            //Save it
+            let encoder = JSONEncoder()
+            if let encoded = try? encoder.encode(conversionRecords) {
+                UserDefaults.standard.set(encoded, forKey: "conversionRecords")
+            }
         }
         
     }
@@ -133,7 +139,6 @@ extension CurrencyViewController {
     
     private func showAlertError() {
         let alert = UIAlertController(title: AccessKeys.errorTitle, message: AccessKeys.errorMsg, preferredStyle: .alert)
-            
         alert.addAction(UIAlertAction(title: AccessKeys.errorBT, style: UIAlertAction.Style.default, handler: { _ in
               self.dismiss(animated: true)
           }))
@@ -142,8 +147,6 @@ extension CurrencyViewController {
           }
             
       }
-    
-    
 }
 // MARK: - Picker Delgate Methods.
 extension CurrencyViewController {

@@ -63,7 +63,7 @@ extension ViewController {
         if let data = UserDefaults.standard.data(forKey: "conversionRecords"),
            let decodedRecords = try? JSONDecoder().decode([CurrencyConversionRecord].self, from: data ) {
             conversionRecords = decodedRecords
-            print("xzz", conversionRecords)
+            print("Data :\n", conversionRecords)
         }
     }
     
