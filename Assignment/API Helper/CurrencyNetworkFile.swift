@@ -80,7 +80,6 @@ class CurrencyNetworkFile: ConfigRequestDelegate {
  
 // MARK: - Currency API Calls
 extension CurrencyNetworkFile {
-    
     func getAllCurrencyRate(successCallBack: @escaping (CurrencyData) -> Void, failureCallBack: @escaping (_ errorStr: String?) -> Void) {
         let request = getRequest(with: CurrencyAPIEndPoint.getAllCurrency)
         BaseNetworkManager.shared.fetch(request) { resData, response in

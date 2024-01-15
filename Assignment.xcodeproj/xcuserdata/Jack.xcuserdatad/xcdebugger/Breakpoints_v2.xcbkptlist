@@ -14,8 +14,8 @@
             filePath = "Assignment/API Helper/CurrencyNetworkFile.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
             landmarkName = "getAllCurrencyRate(to:from:successCallBack:failureCallBack:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "Assignment/API Helper/CurrencyNetworkFile.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
             landmarkName = "getAllCurrencyRate(to:from:successCallBack:failureCallBack:)"
             landmarkType = "7">
             <Locations>
@@ -63,6 +63,36 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "105"
                   endingLineNumber = "105"
+                  offsetFromSymbolStart = "148">
+               </Location>
+               <Location
+                  uuid = "D7D67439-9399-433A-BBD1-E41546202C58 - 741b5b84783175d1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Assignment.CurrencyNetworkFile.getAllCurrencyRate(to: Swift.String, from: Swift.String, successCallBack: (Assignment.CurrencyData) -&gt; (), failureCallBack: (Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Assignment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Jack/Desktop/appss/CalculatorCurrencyApp/Assignment/API%20Helper/CurrencyNetworkFile.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
+                  offsetFromSymbolStart = "408">
+               </Location>
+               <Location
+                  uuid = "D7D67439-9399-433A-BBD1-E41546202C58 - d004266c3df9eddf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;) -&gt; () in Assignment.CurrencyNetworkFile.getAllCurrencyRate(to: Swift.String, from: Swift.String, successCallBack: (Assignment.CurrencyData) -&gt; (), failureCallBack: (Swift.Optional&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Assignment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Jack/Desktop/appss/CalculatorCurrencyApp/Assignment/API%20Helper/CurrencyNetworkFile.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
                   offsetFromSymbolStart = "148">
                </Location>
             </Locations>
@@ -190,9 +220,57 @@
             filePath = "Assignment/Currency/CurrencyViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
             landmarkName = "textFieldDidChange(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1627B52C-8C67-41A7-8AC2-BB2BC6534A34 - a915e3ee3f81c262"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Assignment.CurrencyViewController.rate(baseAmt: Swift.Double, convertAmt: Swift.Double) -&gt; Swift.Double"
+                  moduleName = "Assignment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Jack/Desktop/appss/CalculatorCurrencyApp/Assignment/Currency/CurrencyViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "122"
+                  endingLineNumber = "122"
+                  offsetFromSymbolStart = "724">
+               </Location>
+               <Location
+                  uuid = "1627B52C-8C67-41A7-8AC2-BB2BC6534A34 - adbdf12a97327ea2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Assignment.CurrencyViewController.textFieldDidChange(__C.UITextField) -&gt; ()"
+                  moduleName = "Assignment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Jack/Desktop/appss/CalculatorCurrencyApp/Assignment/Currency/CurrencyViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "123"
+                  endingLineNumber = "123"
+                  offsetFromSymbolStart = "5596">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "785D9EFF-61E5-454F-8AAF-45853EC36D17"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Assignment/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "UILoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

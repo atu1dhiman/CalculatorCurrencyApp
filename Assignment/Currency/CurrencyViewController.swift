@@ -8,8 +8,6 @@
 import UIKit
 
 
-
-
 class CurrencyViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     // MARK: IB Outlets
@@ -25,12 +23,15 @@ class CurrencyViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     @IBOutlet weak var pickerVw: UIView!
     @IBOutlet weak var doneBT: UIButton!
     
+    @IBOutlet weak var swapbt: UIButton!
     // MARK: DataModel Variables
     private var selectedCountry = ""
     private let currencyArray = ["DKK", "BRL","PHP","HUF","ILS", "CHF", "ISK", "MXN", "AUD", "RUB", "NZD", "CNY", "INR", "CAD", "BGN", "CZK", "EUR", "RON" , "MYR", "TRY", "USD", "GBP", "JPY", "THB", "KRW", "IDR", "HKD", "NOK", "ZAR", "PLN", "SGD", "HRK"]
     private var currencyData : CurrencyData?
     private var flag = false
     private var sumAmt = 0.0
+    private var conversionRecords = [CurrencyConversionRecord]()
+   
     
     
     override func viewDidLoad() {
@@ -40,11 +41,10 @@ class CurrencyViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         // UI Load.
         UILoad()
     }
+    
 }
-
 // MARK: - IB Outlet Methods
 extension CurrencyViewController {
-    
     @IBAction func toAction(_ sender: Any) {
         pickerVw.isHidden = false
         flag = false
@@ -57,30 +57,67 @@ extension CurrencyViewController {
         pickerVw.isHidden = true
         let rateValue = rate(baseAmt: currencyData?.data?[fromLbl.text ?? ""] ?? 0.0, convertAmt: currencyData?.data?[toLbl.text ?? ""] ?? 0.0)
         resultLbl.text = "\(String(format: "%.2f", rateValue)) \(fromLbl.text ?? "")"
+        let toText = toLbl.text ?? ""
+        let fromText = fromLbl.text ?? ""
+        // Add a new record
+        let newRecord = CurrencyConversionRecord(sourceCurrency: fromText, targetCurrency: toText, exchangeRate: Double(resultLbl.text ?? "") ?? 0.0, amount: Double(enterAmtTxtField.text ?? "") ?? 0.0 , date: Date())
+        conversionRecords.append(newRecord)
+
+        // Save records
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(conversionRecords) {
+            UserDefaults.standard.set(encoded, forKey: "conversionRecords")
+        }
+    }
+    @IBAction func swapAction(_ sender: Any) {
+        let toText = toLbl.text ?? ""
+        let fromText = fromLbl.text ?? ""
+        if fromLbl.text == fromText {
+            fromLbl.text = toText
+            toLbl.text = fromText
+            let rateValue = rate(baseAmt: currencyData?.data?[fromLbl.text ?? ""] ?? 0.0, convertAmt: currencyData?.data?[toLbl.text ?? ""] ?? 0.0)
+            resultLbl.text = "\(String(format: "%.2f", rateValue)) \(fromLbl.text ?? "")"
+            // Add a new record
+            let newRecord = CurrencyConversionRecord(sourceCurrency: fromText, targetCurrency: toText, exchangeRate: Double(resultLbl.text ?? "") ?? 0.0, amount: Double(enterAmtTxtField.text ?? "") ?? 0.0 , date: Date())
+            conversionRecords.append(newRecord)
+            // Save records
+            let encoder = JSONEncoder()
+            if let encoded = try? encoder.encode(conversionRecords) {
+                UserDefaults.standard.set(encoded, forKey: "conversionRecords")
+            }
+            
+        }
     }
 }
 // MARK: - UI Compement Methods...
 extension CurrencyViewController {
     private func UILoad() {
+       
         currencyVw.layer.cornerRadius = 10
         resultVw.layer.cornerRadius = 10
         doneBT.layer.cornerRadius = 10
+        swapbt.layer.cornerRadius = 20
         CurrencyPicker.delegate = self
         CurrencyPicker.dataSource = self
         pickerVw.isHidden = true
         CurrencyPicker.selectRow(5, inComponent:0, animated:false)
-        navigationController?.navigationBar.isHidden = true
+//        navigationController?.navigationBar.isHidden = true
         enterAmtTxtField.addTarget(self,
                                    action: #selector(self.textFieldDidChange(_:)),
                                    for: UIControl.Event.editingChanged)
     }
     @objc func textFieldDidChange(_ textField: UITextField)  {
+        let toText = toLbl.text ?? ""
+        let fromText = fromLbl.text ?? ""
         guard let Amount = enterAmtTxtField.text else { return }
         if Double(Amount) ?? 0.0 < 0{
             showAlertError()
         }else{
             let rateValue = rate(baseAmt: currencyData?.data?[fromLbl.text ?? ""] ?? 0.0, convertAmt: currencyData?.data?[toLbl.text ?? ""] ?? 0.0)
             resultLbl.text = "\(String(format: "%.2f", rateValue)) \(fromLbl.text ?? "")"
+            
+            let newRecord = CurrencyConversionRecord(sourceCurrency: fromText, targetCurrency: toText, exchangeRate: Double(resultLbl.text ?? "") ?? 0.0, amount: Double(enterAmtTxtField.text ?? "") ?? 0.0 , date: Date())
+            conversionRecords.append(newRecord)
         }
         
     }
